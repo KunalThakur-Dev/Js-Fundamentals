@@ -7,4 +7,5 @@ function updateUser(user,update){
     return{...user,...update}
 }
 console.log(updateUser(user,update))
+console.log(user);
 
