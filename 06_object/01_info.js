@@ -12,3 +12,6 @@ console.log(user["email"]);
 console.log(user["isLoggedIn"]);
 
 
+let key = "email";
+console.log(user.key);
+console.log(user[key]);

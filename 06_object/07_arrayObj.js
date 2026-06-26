@@ -1,11 +1,12 @@
 const user = { name: "Alice", age: 28, city: "Paris" };
-const entriesArray = [];
-
-for (const key in user) {
-  if (Object.prototype.hasOwnProperty.call(user, key)) {
-    entriesArray.push([key, user[key]]);
+function objectToArray(obj) {
+  const result = [];
+  for (const key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      result.push([key, obj[key]]);
+    }
   }
+  return result;
 }
 
-console.log(entriesArray); 
-// Output: [ ["name", "Alice"], ["age", 28], ["city", "Paris"] ]
+console.log(objectToArray(user));

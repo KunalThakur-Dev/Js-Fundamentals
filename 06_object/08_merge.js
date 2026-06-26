@@ -3,11 +3,14 @@
 const defaults = { theme: "dark", lang: "en", fontSize: 14 }
 const prefs    = { theme: "light", fontSize: 16 }
 
-//obj2 wins over keys
-mergeObj = {...defaults,...prefs};
-console.log(mergeObj);
+function mergeObj(obj1,obj2){
+ return{...obj1,...obj2};
+}
+
+//prefs wins over keys
+console.log(mergeObj(defaults,prefs));
 
 
-//obj1 wins over keys
-mergeObj = {...prefs,...defaults};
-console.log(mergeObj);
+
+//defaults wins over keys
+console.log(mergeObj(prefs,defaults));
